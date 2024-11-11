@@ -26,17 +26,18 @@ def extract_text_from_pdf_file(pdf_file):
     with open(pdf_file.get_file_location(), 'rb') as file_to_convert:
         pdf_reader = PyPDF2.PdfReader(file_to_convert)
 
+        # extract text from each page
         for page_num in range(len(pdf_reader.pages)):
             page = pdf_reader.pages[page_num]
             text = page.extract_text()
             pdf_file.content[page_num].update({'text': text})
 
-        print('Successfully extracted text from pdf file')
+    print('Successfully extracted text from pdf file')
 
 
 if __name__ == '__main__':
     dir_with_pdf = 'pdf_files'
-    filename = 'part03-snlp.pdf'
+    filename = 'part02-nlp-1-10.pdf'
 
     pdf_file = PDFFile(dir_with_pdf, filename)
 
