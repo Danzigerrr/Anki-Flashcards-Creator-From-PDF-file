@@ -7,7 +7,7 @@ import PyPDF2
 def extract_images_from_pdf_file(pdf_file):
     images = convert_from_path(pdf_file.saving_dir + '/' + pdf_file.filename)
 
-    saving_directory = 'images/' + pdf_file.get_filename_without_extension()
+    saving_directory = pdf_file.get_images_path()
 
     # create directory if it does not exist
     if not os.path.exists(saving_directory):
@@ -44,3 +44,5 @@ if __name__ == '__main__':
     extract_images_from_pdf_file(pdf_file)
 
     extract_text_from_pdf_file(pdf_file)
+
+    print(pdf_file.get_content_head())

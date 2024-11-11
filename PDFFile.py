@@ -1,3 +1,6 @@
+import json
+
+
 class PDFFile:
     content = []
 
@@ -10,5 +13,11 @@ class PDFFile:
 
     def get_filename_without_extension(self):
         return self.filename.split('.')[0] + '/'
+
+    def get_images_path(self):
+        return 'images/' + self.get_filename_without_extension()
+
+    def get_content_head(self):
+        return f"Content:\n{json.dumps(self.content[:5], indent=4)}"
 
 
