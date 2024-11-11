@@ -1,26 +1,30 @@
+from PDFFile import PDFFile
 from pdf2image import convert_from_path
 import os
 
 
-def convert_pdf_file_to_images(dir_with_pdf, filename):
-    images = convert_from_path(dir_with_pdf + '/' + filename)
+def convert_pdf_file_to_images(pdf_file):
+    images = convert_from_path(pdf_file.saving_dir + '/' + pdf_file.filename)
 
-    saving_directory = 'images/' + filename.split('.')[0] + '/'
-    print(saving_directory)
+    saving_directory = 'images/' + pdf_file.filename.split('.')[0] + '/'
 
     # create directory if it does not exist
     if not os.path.exists(saving_directory):
         os.makedirs(saving_directory)
 
-    # convert each page into an image
+    # save each page as an JPEG image
     for i in range(len(images)):
-        images[i].save(saving_directory + 'page' + str(i) + '.jpg', 'JPEG')
-
-    print(f'Saved {len(images)} images in directory {saving_directory}')
+        image_saving_dir = saving_directory + 'page' + str(i) + '.jpg'
+        images[i].save(image_saving_dir, 'JPEG')
+        pdf_file.images.append(image_saving_dir)
 
 
 if __name__ == '__main__':
     dir_with_pdf = 'pdf_files'
     filename = 'part03-snlp.pdf'
-    convert_pdf_file_to_images(dir_with_pdf, filename)
 
+    pdf_file = PDFFile(dir_with_pdf, filename)
+
+    convert_pdf_file_to_images(pdf_file)
+
+    print(f'Saved {len(pdf_file.images)} images in directory ')
