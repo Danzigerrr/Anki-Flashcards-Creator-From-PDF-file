@@ -1,16 +1,26 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from pdf2image import convert_from_path
+import os
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def convert_pdf_file_to_images(dir_with_pdf, filename):
+    images = convert_from_path(dir_with_pdf + '/' + filename)
+
+    saving_directory = 'images/' + filename.split('.')[0] + '/'
+    print(saving_directory)
+
+    # create directory if it does not exist
+    if not os.path.exists(saving_directory):
+        os.makedirs(saving_directory)
+
+    # convert each page into an image
+    for i in range(len(images)):
+        images[i].save(saving_directory + 'page' + str(i) + '.jpg', 'JPEG')
+
+    print(f'Saved {len(images)} images in directory {saving_directory}')
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    dir_with_pdf = 'pdf_files'
+    filename = 'part03-snlp.pdf'
+    convert_pdf_file_to_images(dir_with_pdf, filename)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
