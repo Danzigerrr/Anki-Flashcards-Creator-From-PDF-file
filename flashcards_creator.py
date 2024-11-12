@@ -1,6 +1,6 @@
 import genanki
 import random
-
+import os
 from genanki import Model
 
 
@@ -16,19 +16,20 @@ def define_model(model_name):
         model_type=Model.CLOZE,
         fields=[
             {
-                'name': 'Text',
-                'font': 'Arial',
+                'name': 'Text'
             },
             {
-                'name': 'Back Extra',
-                'font': 'Arial',
+                'name': 'Back Extra'
+            },
+            {
+                'name': 'MyMedia'
             },
         ],
         templates=[
             {
                 'name': 'Cloze',
                 'qfmt': '{{cloze:Text}}',
-                'afmt': '{{cloze:Text}}<br>\n{{Back Extra}}',
+                'afmt': '{{cloze:Text}}<br>\n{{Back Extra}} <br>{{MyMedia}}',
             },
         ],
         css='.card {\n font-family: arial;\n font-size: 20px;\n text-align: center;\n color: black;\n background-color: white;\n}\n\n'
@@ -52,12 +53,13 @@ def create_notes(pdf_file):
 
     q = "Question here {{c1:: qqqqq }}"
     a = "Answer here  {{c1:: aaaaa }} "
-    m = "images/part02-nlp-1-10/page0.jpg"
+    m = '<img src="page0.jpg">'
+
     for i in range(2):
     # for i in range(len(pdf_file.images)):
         note = genanki.Note(
             model=model,
-            fields=[q, a])
+            fields=[q, a, m])
         notes.append(note)
     return notes
 
@@ -72,6 +74,13 @@ def create_deck_with_notes(notes, deck_name):
 
 def write_deck_to_file(deck, filename, pdf_file):
     my_package = genanki.Package(deck)
-    my_package.media_files = pdf_file.images  # ['sound.mp3', 'images/image.jpg']
-    my_package.write_to_file(filename + '.apkg')
+    my_package.media_files = ['images/part02-nlp-1-10/page0.jpg']
+
+    saving_directory = "generated_decks/"
+
+    # create directory if it does not exist
+    if not os.path.exists(saving_directory):
+        os.makedirs(saving_directory)
+
+    my_package.write_to_file(saving_directory + filename + '.apkg')
 
