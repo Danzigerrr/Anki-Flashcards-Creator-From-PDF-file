@@ -1,6 +1,8 @@
 import genanki
 import random
 
+from genanki import Model
+
 
 def generate_random_id():
     return random.randrange(1 << 30, 1 << 31)
@@ -11,18 +13,27 @@ def define_model(model_name):
     my_model = genanki.Model(
         model_id,
         model_name,
+        model_type=Model.CLOZE,
         fields=[
-            {'name': 'Question'},
-            {'name': 'Answer'},
-            {'name': 'Media'},
+            {
+                'name': 'Text',
+                'font': 'Arial',
+            },
+            {
+                'name': 'Back Extra',
+                'font': 'Arial',
+            },
         ],
         templates=[
             {
-                'name': 'Card 1',
-                'qfmt': '{{Question}}<br>{{Media}}',
-                'afmt': '{{FrontSide}}<hr id="answer">{{Answer}}',
+                'name': 'Cloze',
+                'qfmt': '{{cloze:Text}}',
+                'afmt': '{{cloze:Text}}<br>\n{{Back Extra}}',
             },
-        ])
+        ],
+        css='.card {\n font-family: arial;\n font-size: 20px;\n text-align: center;\n color: black;\n background-color: white;\n}\n\n'
+            '.cloze {\n font-weight: bold;\n color: blue;\n}\n.nightMode .cloze {\n color: lightblue;\n}',
+    )
 
     return my_model
 
@@ -35,7 +46,7 @@ def create_deck(deck_name):
 
 def create_notes(pdf_file):
 
-    model = define_model("Basic Flashcards Model")
+    model = define_model("Cloze aaa Flashcards Model")
 
     notes = []
 
@@ -45,7 +56,7 @@ def create_notes(pdf_file):
     for i in range(2):
     # for i in range(len(pdf_file.images)):
         note = genanki.Note(
-            model=genanki.CLOZE_MODEL,
+            model=model,
             fields=[q, a])
         notes.append(note)
     return notes

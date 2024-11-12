@@ -2,7 +2,7 @@ from PDFFile import PDFFile
 from pdf2image import convert_from_path
 import os
 import PyPDF2
-from flashcards_creator import define_model, create_notes, create_deck_with_notes, write_deck_to_file
+from flashcards_creator import create_notes, create_deck_with_notes, write_deck_to_file
 
 
 def extract_images_from_pdf_file(pdf_file):
