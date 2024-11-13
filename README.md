@@ -1,9 +1,14 @@
 # Create Anki Flashcards from PDFs Using ChatGPT
 
-This project automates the creation of Anki flashcards from PDF files, 
-transforming each page into HTML-formatted text with cloze deletions. 
-The resulting Anki deck is ready for direct import into [Anki](https://apps.ankiweb.net/), 
+![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+This project automates the creation of Anki flashcards from PDF files,
+transforming each page into HTML-formatted text with cloze deletions.
+The resulting Anki deck is ready for direct import into [Anki](https://apps.ankiweb.net/),
 making study materials more interactive and engaging.
+
+To create Anki flashcards, I used [genanki](https://github.com/kerrickstaley/genanki) - a library for generating Anki decks.
 
 ## Motivation
 I found that manually creating Anki flashcards by copying, formatting,
