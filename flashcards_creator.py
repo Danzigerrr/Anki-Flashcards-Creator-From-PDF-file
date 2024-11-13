@@ -51,9 +51,12 @@ def create_notes(pdf_file):
 
     notes = []
 
-    q = "Question here {{c1:: qqqqq }}"
-    a = "Answer here  {{c1:: aaaaa }} "
-    m = '<img src="page0.jpg">'
+    # HTML encoding
+    q = "<div><strong>Distributed Systems Challenges:</strong></div><ul><li>Machines act {{c1::independently}}, communicating only via {{c2::a network}}</li></ul>"
+    a = "<br>Back extra here"
+    # image must have a unique filename
+    image_filename = pdf_file.get_filename_without_extension() + "_page0.jpg"
+    m = f'<img src="{image_filename}">'
 
     for i in range(2):
     # for i in range(len(pdf_file.images)):
@@ -74,7 +77,7 @@ def create_deck_with_notes(notes, deck_name):
 
 def write_deck_to_file(deck, filename, pdf_file):
     my_package = genanki.Package(deck)
-    my_package.media_files = ['images/part02-nlp-1-10/page0.jpg']
+    my_package.media_files = ['images/part02-nlp-1-10/part02-nlp-1-10_page0.jpg']
 
     saving_directory = "generated_decks/"
 
