@@ -7,7 +7,7 @@ OPENAI_APIKEY = os.getenv('OPENAI_APIKEY')
 openai.api_key = OPENAI_APIKEY
 
 
-def format_text(model_name, input_text):
+def format_text_as_html(input_text, model_name="gpt-4o-mini"):
     response = openai.chat.completions.create(
         model=model_name,
         messages=[
@@ -51,9 +51,8 @@ def format_text(model_name, input_text):
 
 
 if __name__ == '__main__':
-    model_name = "gpt-4o-mini"
     unformatted_text = """
         sample unformatted text
         """
-    formatted_text = format_text(model_name, unformatted_text)
+    formatted_text = format_text_as_html(unformatted_text)
     print(formatted_text)

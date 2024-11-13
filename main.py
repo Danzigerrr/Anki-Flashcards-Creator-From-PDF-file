@@ -38,7 +38,7 @@ def extract_text_from_pdf_file(pdf_file):
 
 def extract_info_from_pdf():
     dir_with_pdf = 'pdf_files'
-    filename = 'part02-nlp-1-10.pdf'
+    filename = 'examplefile.pdf'
 
     pdf_file = PDFFile(dir_with_pdf, filename)
 
@@ -52,9 +52,9 @@ def extract_info_from_pdf():
 
 
 def create_flashcards(pdf_file: PDFFile):
-    deck_name = pdf_file.get_filename_without_extension() + '_model'
+    deck_name = pdf_file.get_filename_without_extension()
     notes = create_notes(pdf_file)
-    deck = create_deck_with_notes(notes, deck_name)
+    deck = create_deck_with_notes(notes, deck_name + '_model')
     write_deck_to_file(deck, deck_name, pdf_file)
 
 

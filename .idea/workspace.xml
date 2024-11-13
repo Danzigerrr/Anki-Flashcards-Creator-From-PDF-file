@@ -7,7 +7,8 @@
     <list default="true" id="29e429eb-79e1-4d57-b8af-7e7ae961e9fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatgpt_connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatgpt_connector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <recent name="C:\Informatyka\Rozne\AnkiFlashcardsCreatorFromPDF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.chatgpt_connector">
+  <component name="RunManager" selected="Python.main">
     <configuration name="chatgpt_connector" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnkiFlashcardsCreatorFromPDF" />
       <option name="ENV_FILES" value="" />
@@ -134,25 +135,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/chatgpt_connector.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/flashcards_creator.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AnkiFlashcardsCreatorFromPDF$main.coverage" NAME="main Coverage Results" MODIFIED="1731506458559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnkiFlashcardsCreatorFromPDF$main.coverage" NAME="main Coverage Results" MODIFIED="1731514760199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AnkiFlashcardsCreatorFromPDF$chatgpt_connector.coverage" NAME="chatgpt_connector Coverage Results" MODIFIED="1731511060239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

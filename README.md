@@ -12,6 +12,12 @@ In the root directory create an `.env` file where you store your OPEN API key (k
 OPENAI_APIKEY=insert_your_API_key_here
 ```
 
+### Importing the creatied deck
+
+1. import file
+2. sync
+3. tools --> check database
+
 ## Installation
 
 The `requirements.txt` file was created using pipreqs library. The following command:
