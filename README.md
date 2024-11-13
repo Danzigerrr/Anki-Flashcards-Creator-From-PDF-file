@@ -96,7 +96,7 @@ This project relies on Python libraries specified in `requirements.txt`. To set 
 - **`write_deck_to_file`**: Writes the generated Anki deck to a `.apkg` file, which can be imported into Anki.
 
 ## License
-MIT License.
+[MIT License](https://github.com/Danzigerrr/Anki-Flashcards-Creator-From-PDF-file?tab=MIT-1-ov-file#readme)
 
 ## Contributions
 Contributions are welcome! If you have any suggestions or find any issues, feel free to create a pull request or open an issue.
