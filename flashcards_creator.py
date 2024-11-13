@@ -66,7 +66,7 @@ def create_notes(pdf_file):
             formatted_text = format_text_as_html(page_text)
         else:
             # If the text is not longer than 10 words, just use it as-is
-            formatted_text = page_text
+            formatted_text = page_text + " {{c1::todo}}"
 
         # Image filename corresponding to the page
         image_filename = pdf_file.get_filename_without_extension() + f"_page{i}.jpg"

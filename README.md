@@ -12,11 +12,10 @@ In the root directory create an `.env` file where you store your OPEN API key (k
 OPENAI_APIKEY=insert_your_API_key_here
 ```
 
-### Importing the creatied deck
+### Importing the created deck
 
-1. import file
-2. sync
-3. tools --> check database
+The deck is generated in `generated_decks` directory. 
+You can import it into Anki application using the `Import file` button.
 
 ## Installation
 

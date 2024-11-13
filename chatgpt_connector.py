@@ -11,40 +11,31 @@ def format_text_as_html(input_text, model_name="gpt-4o-mini"):
     response = openai.chat.completions.create(
         model=model_name,
         messages=[
-            {"role": "system", "content": "You are a text formatter that adds HTML tags to format text."},
-            {"role": "user", "content": "Please format my text using only HTML tags. Make the key insight bold. "
-                                        "Structure the text in an easy to follow way."},
-            {"role": "user", "content": "Example input:\n\nFeature Representation\nFeature Engineering\n"
-                                        "Importance of feature engineering\n• The features used determine the level "
-                                        "of abstraction of o in x.\n• Some features generalize worse than others "
-                                        "towards unseen data.\n• Engineering features that predict a target variable "
-                                        "C and generalize well is key to effective feature-based NLP.\nFeature "
-                                        "engineering in NLP\n• Standard features. Some types help in many tasks, "
-                                        "e.g., bag-of-words.\n• Specific features. Often, the most discriminative "
-                                        "types encode expert knowledge about the task and input.\nAlso, advanced "
-                                        "versions of standard features exist, such as TF-IDF.\nFeature selection and "
-                                        "dimensionality reduction\n• Techniques that aim to reduce the set of "
-                                        "considered features to improve generalizability and training efficiency\n"
-                                        "Not in the focus of this course"},
-            {"role": "assistant", "content": "<h3>Feature Representation: Feature Engineering</h3><ul "
-                                             "class=\"markdown-loose\"><li><b>Importance of Feature Engineering</b>:"
-                                             "<ul class=\"markdown-tight\"><li>Determines {{c1::the <b>level of "
-                                             "abstraction</b>}} for mapping inputs.</li><li>Some features <b>generalize "
-                                             "better</b> on unseen data than others.</li><li>Designing features that "
-                                             "<b>predict the target variable</b> and generalize well is essential for "
-                                             "effective feature-based NLP.</li></ul></li><li><b>Feature Engineering in "
-                                             "NLP</b>:<ul class=\"markdown-tight\"><li><b>{{c2::Standard}} features</b>: "
-                                             "Common types, like <b>bag-of-words</b>, are helpful across various tasks."
-                                             "</li><li><b>{{c3::Specific}} features</b>: Often encode <b>expert "
-                                             "knowledge</b> and are highly discriminative for certain tasks.</li><li>"
-                                             "<b>{{c4::Advanced}} versions</b> of standard features, like <b>TF-IDF</b>, "
-                                             "can add more value.</li></ul></li><li><b>Feature Selection and "
-                                             "Dimensionality Reduction</b>:<ul class=\"markdown-tight\"><li>Reduce the "
-                                             "feature set to improve <b>generalizability</b> and <b>training "
-                                             "efficiency</b>.</li></ul></li></ul>"},
+            {"role": "system", "content": "You are a text formatter that adds HTML tags to format text with key "
+                                          "insights bolded."
+                                          "The response should end with empty Anki cloze deletion brackets:"
+                                          " {{c1::todo}}. "
+                                          "You may adjust the wording slightly to improve readability. "
+                                          "Ensure key knowledge points are highlighted "
+                                          "and clearly structured."},
+            {"role": "user", "content": "Please format my text using HTML tags. Make key insights bold, "
+                                        "and add {{c1::todo}} at the end of the response."},
+            {"role": "user", "content": "Example input:\n\nNatural Language Processing\n\nNLP "
+                                        "is a field of AI focused on the interaction between "
+                                        "computers and human language. It involves applications "
+                                        "like machine translation, text summarization, "
+                                        "and sentiment analysis."},
+            {"role": "assistant", "content": "<h3>Natural Language Processing (NLP)</h3><ul><li>NLP"
+                                             " is a field of AI focused on "
+                                             "the <b>interaction between computers and human "
+                                             "language</b>.</li><li>It involves applications "
+                                             "such as <b>machine translation</b>, <b>text summarization</b>,"
+                                             " and <b>sentiment analysis</b>.</li></ul>"
+                                             "{{c1::todo}}"},
             {"role": "user", "content": f"Now, please format the following text with HTML tags:\n\n{input_text}"}
         ]
     )
+
     formatted_text = response.choices[0].message.content
 
     return formatted_text
