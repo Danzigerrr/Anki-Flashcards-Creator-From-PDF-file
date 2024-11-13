@@ -16,7 +16,7 @@ def extract_images_from_pdf_file(pdf_file):
 
     # save each page as an JPEG image
     for i in range(len(images)):
-        image_saving_dir = saving_directory + 'page' + str(i) + '.jpg'
+        image_saving_dir = saving_directory + '/' + pdf_file.get_filename_without_extension() + '_page' + str(i) + '.jpg'
         images[i].save(image_saving_dir, 'JPEG')
         pdf_file.images.append(image_saving_dir)
 
