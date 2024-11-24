@@ -7,12 +7,16 @@ import PyPDF2
 class PDFFile:
     filename = ""
     saving_dir = ""
+    pdf_file_topic = ""
+    notes = ""
     images = []
     text = []
 
-    def __init__(self, saving_dir, filename):
+    def __init__(self, saving_dir, filename, pdf_file_topic, lecture_notes):
         self.saving_dir = saving_dir
         self.filename = filename
+        self.pdf_file_topic = pdf_file_topic
+        self.lecture_notes = lecture_notes
 
     def get_file_location(self):
         return self.saving_dir + '/' + self.filename
@@ -24,13 +28,22 @@ class PDFFile:
         return 'images/' + self.get_filename_without_extension()
 
     def get_content_head(self):
-        return f"Content:\n{json.dumps(self.text[:5], indent=4)}"
+        return (f"Content info:\n"
+                f"images: {len(self.images)}\n"
+                f"text: {len(self.text)}\n"
+                f"Content Head:\n{json.dumps(self.text[:5], indent=4)}")
 
     def get_filename(self):
         return self.filename
 
     def get_saving_dir(self):
         return self.saving_dir
+
+    def get_topic(self):
+        return self.pdf_file_topic
+
+    def get_notes(self):
+        return self.notes
 
     def extract_images_from_pdf_file(self):
         images = convert_from_path(self.saving_dir + '/' + self.filename)
