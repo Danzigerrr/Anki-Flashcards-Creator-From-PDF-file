@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e429eb-79e1-4d57-b8af-7e7ae961e9fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecture_notes/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDFFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/PDFFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatgpt_connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatgpt_connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +44,8 @@
     &quot;Python.chatgpt_connector.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Informatyka/9 SEMESTR/Deep Learning/PyTorch-Practice&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Informatyka/Rozne/AnkiFlashcardsCreatorFromPDF/pdf_files&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -52,8 +59,8 @@
       <recent name="C:\Informatyka\Rozne\AnkiFlashcardsCreatorFromPDF\pdf_files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Informatyka\Rozne\AnkiFlashcardsCreatorFromPDF\readme_images" />
       <recent name="C:\Informatyka\Rozne\AnkiFlashcardsCreatorFromPDF\pdf_files" />
+      <recent name="C:\Informatyka\Rozne\AnkiFlashcardsCreatorFromPDF\readme_images" />
       <recent name="C:\Informatyka\Rozne\AnkiFlashcardsCreatorFromPDF" />
     </key>
   </component>
@@ -123,7 +130,14 @@
       <workItem from="1731483687445" duration="43000" />
       <workItem from="1731488032169" duration="722000" />
       <workItem from="1731505534752" duration="921000" />
-      <workItem from="1731526249180" duration="5009000" />
+      <workItem from="1731526249180" duration="5632000" />
+      <workItem from="1731659352071" duration="3088000" />
+      <workItem from="1732008949053" duration="3644000" />
+      <workItem from="1732085706515" duration="908000" />
+      <workItem from="1732105077213" duration="12000" />
+      <workItem from="1732106295057" duration="4291000" />
+      <workItem from="1732183463800" duration="1064000" />
+      <workItem from="1732447296393" duration="1752000" />
     </task>
     <servers />
   </component>
@@ -135,14 +149,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/flashcards_creator.py</url>
-          <line>107</line>
+          <line>176</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AnkiFlashcardsCreatorFromPDF$main.coverage" NAME="main Coverage Results" MODIFIED="1731530271707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AnkiFlashcardsCreatorFromPDF$main.coverage" NAME="main Coverage Results" MODIFIED="1732447603085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AnkiFlashcardsCreatorFromPDF$chatgpt_connector.coverage" NAME="chatgpt_connector Coverage Results" MODIFIED="1731511060239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -11,8 +11,6 @@ def read_notes_file(file_path):
 
 
 def extract_info_from_pdf():
-    dir_with_pdf = 'pdf_files'
-    filename = 'examplefile.pdf'
     file_to_analyze = 'pdf_files/05_Modeling.pdf'
 
     dir_with_pdf = file_to_analyze.split("/")[0]
