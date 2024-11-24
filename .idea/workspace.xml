@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e429eb-79e1-4d57-b8af-7e7ae961e9fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lecture_notes/notes.txt" afterDir="false" />
+    <list default="true" id="29e429eb-79e1-4d57-b8af-7e7ae961e9fb" name="Changes" comment="Add parallelization of request to openAI model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDFFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/PDFFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatgpt_connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatgpt_connector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashcards_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,12 +133,44 @@
       <workItem from="1732105077213" duration="12000" />
       <workItem from="1732106295057" duration="4291000" />
       <workItem from="1732183463800" duration="1064000" />
-      <workItem from="1732447296393" duration="1752000" />
+      <workItem from="1732447296393" duration="2260000" />
+      <workItem from="1732481931264" duration="313000" />
     </task>
+    <task id="LOCAL-00001" summary="Add inserting lecture notes during generating flashcards">
+      <option name="closed" value="true" />
+      <created>1732450883647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732450883647</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add reading lecture notes from a *.txt file">
+      <option name="closed" value="true" />
+      <created>1732450935242</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732450935242</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add parallelization of request to openAI model">
+      <option name="closed" value="true" />
+      <created>1732450991952</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732450991952</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add inserting lecture notes during generating flashcards" />
+    <MESSAGE value="Add reading lecture notes from a *.txt file" />
+    <MESSAGE value="Add parallelization of request to openAI model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add parallelization of request to openAI model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -31,11 +31,12 @@ This way, I make systematic learning more enjoyable and effective in the long ru
 
 1. **Prepare the PDF**: Save your input PDF file in the `pdf_files` directory.
 2. **Create .env file**: Create `.env` file in the project root directory with your OpenAI API secret key. 
-3. **Run the Script**: Execute the main script by running `main.py`:
+3. **Edit notes.txt file**: Write relevant lecture notes in the `notes.txt` file inside the `lecture_notes` folder. 
+4. **Run the Script**: Execute the main script by running `main.py`:
    ```bash
    python main.py
    ```
-4. **Find the Generated Deck**: After running, the resulting `*.apkg` file will be saved in the `generated_decks` directory with the same name as your PDF file.
+5. **Find the Generated Deck**: After running, the resulting `*.apkg` file will be saved in the `generated_decks` directory with the same name as your PDF file.
 
 ### Importing the Created Deck
 
